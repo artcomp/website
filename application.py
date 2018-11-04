@@ -12,7 +12,7 @@ def index():
 
 @app.route('/avaliar')
 def avaliar():
-	return render_template("avaliar.html")
+	return render_template("avaliar.html", title='New News Title')
 
 
 if __name__ == '__main__':
