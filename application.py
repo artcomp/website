@@ -15,5 +15,11 @@ def avaliar():
 	return render_template("avaliar.html", title='New News Title')
 
 
+
+@app.route('/validar')
+def validar():
+	return render_template("validar.html", title='New News Title')
+
+
 if __name__ == '__main__':
 	app.run(debug=True)
