@@ -27,7 +27,7 @@
             "toponym_geonamesId": "0000000", 
             "top_find_on_new": "MG", 
             "mean_confiability": 5.0, 
-            "top_selected_by_user": "N e n h u m a"
+            "top_selected_by_user": "Nenhuma"
         }, 
         {
             "std_deviation": 0.5145, 
@@ -44,7 +44,7 @@
             "top_selected_by_user": "Minas Gerais"
         }
     ], 
-    "number_of_voters": 20, 
-    "cronbach": 0.994, 
+    "number_of_voters": 21, 
+    "cronbach": 0.9915, 
     "title": "Funcionários são atropelados por ex-patrão após audiência trabalhista em MG "
 }

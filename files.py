@@ -177,7 +177,7 @@ def processData(title,url):
 		mean_stddev.append((info_top_to_carry,mea,std_dev))
 
 
-	print mean_stddev
+	# print mean_stddev
  	return (calculateAlpha(title), mean_stddev)
 	
 
