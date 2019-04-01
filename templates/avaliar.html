@@ -31,6 +31,15 @@
          longitude: -73.9863,
          zoom: 14 });
    });
+
+  function myFunction() {
+  location.replace(url_for('validar	'))
+}
+
+  function submitButtonStyle(_this) {
+  _this.style.backgroundColor = "rgb(130, 134, 140)";
+  _this.style.color = "white";
+}
  </script>
 
 
@@ -51,7 +60,7 @@
                                 <div class="center gap fade-down section-heading">
                                     <h2 class="main-title">{{title}}</h2>
                                     <hr>
-                                    <p>This is a subparagraph with the news subtitle
+                                    <!-- <p> {{sub_title}}</p> -->
                                 </div>
                             </div>   
                         </div>
@@ -59,26 +68,40 @@
                 </div><!--/.item-->
             </div><!--/.carousel-inner-->
         </div><!--/.carousel-->
+
     </section><!--/#main-slider-->
 
+
+
+
     <div id="content-wrapper">
+
         <section id="about-us" class="white">
+
             <div class="container">
+                <!-- <div class="text-center">  <span style="font-size: 1.5em">Lembrando que : </span> <select><option>Local a que se refere</option></select> <select><option>Quão certo de sua resposta você está?</option></select></div> -->
                 <div class="gap"></div>
+
                 <div class="row">
                     <div class="col-md-12 fade-up">
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
-
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+                        <form action="{{url_for('avaliar')}}" method="POST">     
+                        {{ noticia|safe }}
                     </div>
+
+                 
+
                     <div class="col-md-4 fade-up">
 
                     </div>
                 </div>
 
+
                 <div class="row">
                     <div class="center-block text-center ">
-                        <a class="btn btn-lg btn-outlined btn-primary animation bounce-in" href="{{url_for('validar')}}" style="font-size: 2em">Continuar</a>
+                        <button type="submit" class="btn btn-lg btn-outlined btn-primary animation bounce-in" style="font-size: 2em" name="submit_button" value="Do Something">Nova Notícia</button>
+
+
+                        <button type="submit" class="btn btn-lg btn-outlined btn-primary animation bounce-in" style="font-size: 2em" name="submit_button" value="Do Something Else">Finalizar</button></form>
                     </div>
                </div> 
 
@@ -88,3 +111,40 @@
     </div>
 
 {% endblock content  %}
+
+
+
+ <!-- <div id="collapse-test">
+
+                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Button with data-target </button>
+                    
+                        <div class="collapse" id="collapseExample">
+                          <div class="well">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    sd
+                                </div>
+                                <div class="col-md-2">
+                                
+                            
+                            <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">botãoo</button></div>
+                            </div>
+                          </div>
+
+                        </div>
+                        
+                </div> -->
+                
+               <!--  <div id="collapse-test2">
+
+                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample"> Button with data-target </button>
+                    
+                        <div class="collapse" id="collapseExample2">
+                          <div class="well">
+                            some text
+                          </div>
+
+                        </div>
+                        
+                </div>
+                 -->

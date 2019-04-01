@@ -6,33 +6,33 @@
 {% block js_image_content %}
 
 <script type="text/javascript">
-    jQuery(document).ready(function($){
-     'use strict';
-     jQuery('body').backstretch([
-       "static/images/bg/bg1.jpg",
-       "static/images/bg/bg2.jpg"
+	jQuery(document).ready(function($){
+		'use strict';
+		jQuery('body').backstretch([
+			"static/images/bg/bg1.jpg",
+			"static/images/bg/bg2.jpg"
             // ,"images/bg/bg3.jpg"
-         ], {duration: 5000, fade: 500, centeredY: true });
+            ], {duration: 5000, fade: 500, centeredY: true });
 
-     $("#mapwrapper").gMap({ controls: false,
-      scrollwheel: false,
-      markers: [{   
-       latitude:40.7566,
-       longitude: -73.9863,
-       icon: { image: "images/marker.png",
-       iconsize: [44,44],
-       iconanchor: [12,46],
-       infowindowanchor: [12, 0] } }],
-       icon: { 
-         image: "images/marker.png", 
-         iconsize: [26, 46],
-         iconanchor: [12, 46],
-         infowindowanchor: [12, 0] },
-         latitude:40.7566,
-         longitude: -73.9863,
-         zoom: 14 });
-   });
- </script>
+		$("#mapwrapper").gMap({ controls: false,
+			scrollwheel: false,
+			markers: [{   
+				latitude:40.7566,
+				longitude: -73.9863,
+				icon: { image: "images/marker.png",
+				iconsize: [44,44],
+				iconanchor: [12,46],
+				infowindowanchor: [12, 0] } }],
+				icon: { 
+					image: "images/marker.png", 
+					iconsize: [26, 46],
+					iconanchor: [12, 46],
+					infowindowanchor: [12, 0] },
+					latitude:40.7566,
+					longitude: -73.9863,
+					zoom: 14 });
+	});
+</script>
 
 
 {% endblock js_image_content %}
@@ -40,71 +40,78 @@
 {% block content  %}
 
 
-    <section id="main-slider" class="no-margin">
-        <div class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content center centered">
-                                	<span class="home-icon pe-7s-gleam bounce-in"></span>
-                                    <h2 class="boxed animation animated-item-1 fade-down mt-4">AvaliaGeo</h2><br>
-                                    <p class="boxed animation animated-item-2 fade-up">Avaliar Notícias Geocodificadas a partir de sites como : g1.com, yahoo.com.br</p>
-                                    <br>
+<section id="main-slider" class="no-margin">
+	<div class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="item active">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="carousel-content center centered">
+								<span class="home-icon pe-7s-gleam bounce-in"></span>
+								<h2 class="boxed animation animated-item-1 fade-down mt-4">AvaliaGeo</h2><br>
+								<p class="boxed animation animated-item-2 fade-up">Avaliar Notícias Geocodificadas a partir de sites como : g1.com, yahoo.com.br</p>
+								<br>
 
-                                    <a class="btn btn-outline-success animation bounce-in" href="{{url_for('index',_anchor='about-us')}}">Saiba Mais</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-    </section><!--/#main-slider-->
+								<a class="btn btn-outline-success animation bounce-in" href="{{url_for('index',_anchor='about-us')}}">Saiba Mais</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/.item-->
+		</div><!--/.carousel-inner-->
+	</div><!--/.carousel-->
+</section><!--/#main-slider-->
 
-    <div id="content-wrapper">
-        
-        <section id="about-us" class="white">
-        	<div class="container">
-	            <div class="gap"></div>
-	            <div class="row">
-	                <div class="col-md-12">
-	                    <div class="center gap fade-down section-heading">
-	                        <h2 class="main-title">Um Pouco Sobre o Projeto</h2>
-	                        <hr>
-	                        <p>Um sistema que permite aos usuários classificar referências geográficas presente em notícias</p>
-	                    </div>                
-	                </div>
-	            </div>
-	            <div class="row">
-	                <div class="col-md-10 col-md-offset-1 fade-up">
-	                    <p class="text-justify">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+<div id="content-wrapper">
 
-	                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+	<section id="about-us" class="white">
+		<div class="container">
+			<div class="gap"></div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="center gap fade-down section-heading">
+						<h2 class="main-title">Um Pouco Sobre o Projeto</h2>
+						<hr>
+						<p>Um sistema que permite aos usuários classificar referências geográficas presente em notícias</p>
+					</div>                
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 fade-up">
 
-	                     <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+					<p class="text-justify recuo">Olá Tudo Bem, meu nome é Arthur, sou estudante do curso de Engenharia de Computação da Universidade Federal de Ouro Preto, no campos de João Monlevade, mais especificamente no Instituto de Ciencias Exatas e Aplicadas. Este projeto está sendo desenvolvido como Trabalho de Conclusão de Curso e tem como idéia central desenvolver um sistema que servirá de auxílio para a geração e validaçao de bases de dados geocodificadas. Apesar do nome ser um pouco extenso, a idéia é simples, mas primeiro vou explicar do que se trata o problema. </p>
 
-	                </div>
-	                <div class="col-md-4 fade-up">
+					<p class="text-justify recuo">Hoje a quantidade de informação disponível na Internet vem crescendo de forma exponencial, ocasionado por diversos fatores como: aumento de redes sociais, blogs, sites de notícias, etc. Logo uma pergunta natural que se faz é a seguinte: O que fazer com esta quantidade de dados??? Bom, uma das diversas aplicações possíveis é a obtenção de informação geográfica, ou seja, saber a qual lugar geográfico determinada mídia(texto, áudio, vídeo) se refere. Com a obtenção desta informação é possível desenvolver soluções personalizadas para determinados grupo de pessoas baseados em sua locãlização. </p>
 
-	                </div>
-	            </div>
-               
-               <div class="row">
-	               	<div class="center-block text-center ">
-	               		<a class="btn btn-lg btn-outlined btn-primary animation bounce-in" href="{{url_for('avaliar')}}" style="font-size: 2em">Avaliar</a>
-	               	</div>
-               </div> 
+					<p class="text-justify recuo">Para a realização do trabalho é utilizado processamento de textos para a obtenção da referência geográfica. Neste processo, um algoritmo (ou um conjunto deles) é utilizado para tentar inferir tal informação, utilizando para isso um conjunto de parâmentros para a tomada de decisao. Entretando os algoritmos podem apresentar falhas, podendo estas falhas ser ocasionada por : falta de parâmetros, quantidade de parâmetros não são sufucientes para obter informações corretas, parâmetros utilizados podem ter pesos não ajustados entre si que refletem na decisão tomada.</p>
+
+					<p class="text-justify recuo">Agora que já se tem uma ideia do problema, qual a solução proposta por este trabalho??? Bom, alguns altores já proporam abordagens para solucionar o problema, entretanto estes utilizam bases de dados específicas para testar seus algoritmos. E qual o problema com isso? Bom se cada um utilizada dados específicos para sua solução, a comparação entre as diferentes soluções é inviabilizada, não permitindo assim saber os pontos fortes e fracos de cada solução.</p>
+
+					<p class="text-justify recuo">Assim, este projeto tem como objetivo construir bases de dados genéricas para que os desenvolvedores as utilizem para a construção de seus algoritmos, e permitindo no fururo a comparação entre os algoritmos desenvolvidos, já que serão construídos e validados a partir das base de dados construídas.</p>
+
+					<p class="text-justify recuo">E como voce participa neste processo??? Bom, a ideia é pegar uma notícia de um site de notícias, e permitir que o usuário, ou seja, você, classifique o local ao qual uma determinada palavra se refere. Como exemplo tome a Palavra "São Paulo", esta pode se referir a cidade, o estado, o time de futebol ou ainda o próprio santo. Assim você ajudará no processo classificando a qual contexto a palavra se refere, lembrando que neste trabalho o que nos enteressa é apenas a informação geográfica. Além de poder classificar é possível ainda indicar possíveis palavras que não estão rotuladas, e a cada classificação indicar o grau de confiança da sua resposta.</p>
+
+				</div>
+				<div class="col-md-4 fade-up">
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="center-block text-center ">
+					<a class="btn btn-lg btn-outlined btn-primary animation bounce-in" href="{{url_for('avaliar')}}" style="font-size: 2em">Avaliar</a>
+				</div>
+			</div> 
 
 
-	            <div class="gap"></div>  
-	            <div class="gap"></div>   
-            </div>      
-        </section>
+			<div class="gap"></div>  
+			<div class="gap"></div>   
+		</div>      
+	</section>
 
-			
 
-        </div>
+
+</div>
 
 {% endblock content  %}
