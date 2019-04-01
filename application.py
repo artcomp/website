@@ -59,8 +59,7 @@ def avaliar():
 		qt_of_tops = len(toponyms)
 		# del toponyms[:]
 
-		print "Qtde de tops on POST : ", qt_of_tops 
-		
+			
 		while qt_of_tops > 0:
 			top = request.form.get('top_data_'+str(i))
 			conf = request.form.get('confi_data_'+str(i))
