@@ -228,7 +228,9 @@ def generateNewsJsonFiles(processData, tops, url,title):
 	# , ensure_ascii=False).encode('utf8'
 	closed_news = json.dumps(json_news, sort_keys=False,indent=4, ensure_ascii=False).encode('utf8')
 
-	with open("closedBases/"+title.replace(" ","-"),"w+") as file:
+
+	path=title.replace(" ", "-")
+	with open("closedBases/"+path,"w+") as file:
 		file.write(closed_news)
 
 
