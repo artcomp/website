@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
 
-import polyglot
+
 from polyglot.text import Text, Word
 import info_extract
 import scrap

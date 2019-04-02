@@ -4,7 +4,6 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 import re
 
-import polyglot
 from polyglot.text import Text, Word
 
 def parse_text_toponimo(blob_text):
