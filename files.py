@@ -6,13 +6,15 @@ import numpy
 import ctypes
 
 def dataFromUser(title, data):
-	file = open("bases/"+title,"a+")
+	path = title.replace(" ","-")
+	file = open("bases/"+path,"a+")
 	json_str = json.dumps(data, ensure_ascii=False).encode('utf8')+"@"
 	file.write(json_str)
 	file.close()
 
 def readFile(title):
-	file = open("bases/"+title,"r")
+	path = title.replace(" ","-")
+	file = open("bases/"+path,"r")
 	string = file.read();
 	return string
 
@@ -226,7 +228,7 @@ def generateNewsJsonFiles(processData, tops, url,title):
 	# , ensure_ascii=False).encode('utf8'
 	closed_news = json.dumps(json_news, sort_keys=False,indent=4, ensure_ascii=False).encode('utf8')
 
-	with open("closedBases/"+title,"w+") as file:
+	with open("closedBases/"+title.replace(" ","-"),"w+") as file:
 		file.write(closed_news)
 
 
