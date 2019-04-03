@@ -4,6 +4,14 @@ import collections
 import statistics
 import numpy 
 import ctypes
+import ast
+
+def getNewsDataFromUrls():
+    with open("preProssedNews/news.txt","r") as file:
+        string = file.read();
+
+    return json.loads(string)
+    #return string
 
 def dataFromUser(title, data):
 	path = title.replace(" ","-")

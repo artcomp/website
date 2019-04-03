@@ -2,7 +2,6 @@
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
-import tutor
 import scrap
 import random
 import files
@@ -11,24 +10,25 @@ from flask import request, Flask, render_template, url_for
 
 app = Flask(__name__)
 
-urls = [
-	['https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2019/03/20/foragido-por-assassinato-de-jovem-de-guarulhos-e-preso-em-atibaia.ghtml',""],
-	['https://g1.globo.com/politica/noticia/2019/03/20/alexandre-de-moraes-indica-dois-delegados-para-atuar-no-inquerito-que-investiga-ofensas-ao-stf.ghtml',""],
-	['https://g1.globo.com/sp/mogi-das-cruzes-suzano/noticia/2019/03/13/cena-mais-triste-que-assisti-em-toda-a-minha-vida-diz-doria-sobre-ataque-em-escola-em-suzano.ghtml',""],
-	['https://g1.globo.com/mg/minas-gerais/noticia/2019/03/20/justica-de-minas-bloqueia-r-7784-milhoes-do-filho-de-thor-batista.ghtml',""],
-	['https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml',""],
-	]
-
+#urls = [
+#	['https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2019/03/20/foragido-por-assassinato-de-jovem-de-guarulhos-e-preso-em-atibaia.ghtml',""],
+#	['https://g1.globo.com/politica/noticia/2019/03/20/alexandre-de-moraes-indica-dois-delegados-para-atuar-no-inquerito-que-investiga-ofensas-ao-stf.ghtml',""],
+#	['https://g1.globo.com/sp/mogi-das-cruzes-suzano/noticia/2019/03/13/cena-mais-triste-que-assisti-em-toda-a-minha-vida-diz-doria-sobre-ataque-em-escola-em-suzano.ghtml',""],
+#	['https://g1.globo.com/mg/minas-gerais/noticia/2019/03/20/justica-de-minas-bloqueia-r-7784-milhoes-do-filho-de-thor-batista.ghtml',""],
+#	['https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml',""],
+#	]
+#
 # urls = [
 # 	['https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml',""],
 # 	]
-
-for i in urls:
-	if not i[1]:
-		i[1] = tutor.applicationDev(i[0])
-
+#
+#for i in urls:
+#	if not i[1]:
+#		i[1] = tutor.applicationDev(i[0])
+#
 # urls[17][1] = tutor.applicationDev(urls[17][0])
 
+urls = files.getNewsDataFromUrls()
 
 len_urls_available = len(urls)
 toponyms = []
