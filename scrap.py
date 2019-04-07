@@ -80,32 +80,27 @@ def getJsonReturnListOption(json):
     
     list_d = []
     index_to_alpha = 0
-    for each in data['geonames']:
-        # print each['name'], each['fcode'], each['countryCode']
 
-        try:
-            list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'] + " " + each['countryCode'])
-        except Exception as e:
-            list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'])
+    if len(data['geonames']) == 0:
+        pass
+    else :
+
+        for each in data['geonames']:
+            # print each['name'], each['fcode'], each['countryCode']
+
+            try:
+                list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'] + " " + each['countryCode'])
+            except Exception as e:
+                list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'])
+            
+            index_to_alpha=index_to_alpha+1
+            # if each['fcode'] == "CONT" or each['fcode'] == "RGN":
+            #     list_d.append(each['name'] + " " + each['fcode'])
+            # if each['fcode'] != "CONT" and each['fcode'] != "RGN":
+            #     # print "=======",each['name'], "FCODE ",each['fcode'], each['countryCode']
+            #     list_d.append(each['name'] + " " + each['fcode'] + " " + each['countryCode'])
         
-        index_to_alpha=index_to_alpha+1
-        # if each['fcode'] == "CONT" or each['fcode'] == "RGN":
-        #     list_d.append(each['name'] + " " + each['fcode'])
-        # if each['fcode'] != "CONT" and each['fcode'] != "RGN":
-        #     # print "=======",each['name'], "FCODE ",each['fcode'], each['countryCode']
-        #     list_d.append(each['name'] + " " + each['fcode'] + " " + each['countryCode'])
-    
     return list_d
-
-
-def getJsonAndReturnListOption(json_data):
-	data = json.loads(json_data)
-	list_data = []
-	for each in data['geonames']:
-        
-		list_data.append(each['name'] + " " + each['fcode'] )
-        
-	return list_data
 
 
 def getToponymAndAttachJson(toponimos):

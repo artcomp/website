@@ -23,7 +23,7 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
 <![endif]-->       
-<link rel="shortcut icon" href="{{ url_for( 'static', filename='images/ico/favicon.ico' ) }} ">
+
 
 <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for( 'static', filename='images/ico/apple-touch-icon-144x144.png' ) }} ">
 
@@ -32,6 +32,8 @@
 <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for( 'static', filename='images/ico/apple-touch-icon-72x72.png' ) }}">
 
 <link rel="apple-touch-icon" href="{{ url_for( 'static', filename='images/ico/apple-touch-icon-57x57.png' ) }}">
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300" rel="stylesheet">
 
 	<style>
 		
@@ -50,19 +52,26 @@
 		  color:#D9D9D9;
 		}
 
-	/*	.style_toponym_in_text {
-			border: 0px solid #ccc;
-		  border-radius: 5px;
-		  font-size: 1em;
-		  height: 25px;
-		  line-height: 12px;
-		  margin: 0;
-		  padding: 0px 5px;
-		  background: #383838 none no-repeat;
-		  cursor: pointer;
-		  color:#D9D9D9;
-		}*/
 		
+
+		body {
+		    color: #222;
+		    background: #f5f5f5;
+		    font-family: Lato, sans-serif;
+		    font-weight: 300;
+		    line-height: 1.6;
+		    font-size: 16px;
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+		    font-family: Lato, sans-serif;
+		    font-weight: 700;
+		}
+
 	</style>
 
 
