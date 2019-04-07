@@ -40,6 +40,22 @@
   _this.style.backgroundColor = "rgb(130, 134, 140)";
   _this.style.color = "white";
 }
+
+
+function validate(){
+  var x = document.getElementById("main_form");
+  
+  alert(x.elements.length)
+  
+  for (var i = 0; i < (x.elements.length-2); ++i){
+    if (x[i].value.includes("---")){
+      alert("Você não selecionou um campo. Por favor selecione uma opção")
+      return false;
+    }
+  }
+  return true;
+}
+
  </script>
 
 
@@ -84,7 +100,7 @@
 
                 <div class="row">
                     <div class="col-md-12 fade-up">
-                        <form action="{{url_for('avaliar')}}" method="POST">     
+                        <form action="{{url_for('avaliar')}}" name="main_form" method="POST" onsubmit="validate()">     
                         {{ noticia|safe }}
                     </div>
 
