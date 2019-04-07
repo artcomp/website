@@ -105,6 +105,9 @@ def createDataList(string):
 	del data[-1]
 	l = []
 	for i in data:
+		
+
+		
 		l.append(eval(i))
 
 	return l
