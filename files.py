@@ -15,15 +15,15 @@ def getNewsDataFromUrls():
 
 def dataFromUser(title, data):
 	path = title.replace(" ","-")
-	file = open("bases/"+path,"a+")
-	json_str = json.dumps(data, ensure_ascii=False).encode('utf8')+"@"
-	file.write(json_str)
-	file.close()
-
+	print "Path to Store : >>>>", path
+	with open("bases/"+path,"a+") as file:
+		json_str = json.dumps(data, ensure_ascii=False).encode('utf8')+"@"
+		file.write(json_str)
+	
 def readFile(title):
 	path = title.replace(" ","-")
-	file = open("bases/"+path,"r")
-	string = file.read();
+	with open("bases/"+path,"r") as file:
+		string = file.read();
 	return string
 
 def printDataFromUser(data):
@@ -107,7 +107,7 @@ def createDataList(string):
 	for i in data:
 		
 
-		
+
 		l.append(eval(i))
 
 	return l
