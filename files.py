@@ -5,7 +5,6 @@ import statistics
 import numpy 
 import ctypes
 import ast
-import math
 
 def getNewsDataFromUrls():
     with open("preProssedNews/news.txt","r") as file:
@@ -123,14 +122,12 @@ def groupData(title):
 	txt_l =  readFile(title)
 	file_data_list = createDataList(txt_l)
 	number_of_tops = len(file_data_list[0][0][1])
-	# print "look size : ", file_data_list[0][0][1]
 	nl = []
 	aux = []
 	count = 0
 
 	while count < number_of_tops:
 		for i in file_data_list:
-			# print "Number TOPS : ", number_of_tops," Count : ", count, " datatoapp : ",i[0][1][count] 
 			aux.append(i[0][1][count])
 
 		count = count + 1
@@ -144,8 +141,6 @@ def processData(title,url):
 	
 	minimum_value_to_accept_news = 2
 	std_dev_to_accept = 3
-	valid_alpha_coeficient = 0.0
-
 
 	nl = groupData(title)
 	l_aux = []
@@ -190,18 +185,8 @@ def processData(title,url):
 
 		mean_stddev.append((info_top_to_carry,mea,std_dev))
 
-<<<<<<< HEAD
 	# print mean_stddev
  	return (calculateAlpha(title), mean_stddev)
-=======
-
-	cronbach_alpha = calculateAlpha(title)
-
-	if cronbach_alpha < valid_alpha_coeficient or math.isnan(cronbach_alpha):
-		return False
-
- 	return (cronbach_alpha, mean_stddev)
->>>>>>> 6526014a2a5553441ef31604bab2697453cc4f90
 	
 
 def generateNewsJsonFiles(processData, tops, url,title):

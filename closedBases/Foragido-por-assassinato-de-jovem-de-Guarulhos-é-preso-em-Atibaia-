@@ -1,0 +1,64 @@
+{
+    "url": "https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2019/03/20/foragido-por-assassinato-de-jovem-de-guarulhos-e-preso-em-atibaia.ghtml", 
+    "toponyms": [
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Paraíba", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Região", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Guarulhos —", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Guarulhos", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Atibaia", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Guarulhos", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "SP", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Guarulhos", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }
+    ], 
+    "number_of_voters": 2, 
+    "cronbach": NaN, 
+    "title": "Foragido por assassinato de jovem de Guarulhos é preso em Atibaia "
+}

@@ -315,6 +315,10 @@ def intercalateLists(l1, l2):
 
 # txt_l = '''[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["Patos de Minas PPL", "1"], ["Pouso Alegre Airport AIRP", "1"], ["Santo Antônio Pouso Alegre PPL", "1"], ["Mahajanga PPLA", "1"], ["Santo Antônio Pouso Alegre PPL", "1"], ["Betim PPL", "1"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["Ipatinga PPL", "1"], ["Pouso Alegre PPL", "1"], ["Santo Antônio Pouso Alegre PPL", "1"], ["Mahajanga PPLA", "1"], ["Santo Antônio Pouso Alegre PPL", "1"], ["Patos de Minas PPL", "1"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["Ipatinga PPL", "1"], ["Santo Antônio Pouso Alegre PPL", "1"], ["Pouso Alegre ADM2", "1"], ["Toliara PPLA", "1"], ["Santo Antônio Pouso Alegre PPL", "1"], ["Ipatinga PPL", "1"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["Ipatinga PPL", "1"], ["Nenhuma das Alternativas", "1"], ["Santo Antônio Pouso Alegre PPL", "1"], ["Antsirabe PPLA", "1"], ["Pouso Alegre ADM2", "1"], ["Betim PPL", "1"]]]]@'''
 
+txt_l = '''[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["1 3457153 Minas Gerais ADM1 BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["5 0000000 Nenhuma das Alternativas", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["1 3457153 Minas Gerais ADM1 BR", "1"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["1 3457153 Minas Gerais ADM1 BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["5 0000000 Nenhuma das Alternativas", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["1 3457153 Minas Gerais ADM1 BR", "5"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["1 3457153 Minas Gerais ADM1 BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["5 0000000 Nenhuma das Alternativas", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["1 3457153 Minas Gerais ADM1 BR", "5"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["1 3457153 Minas Gerais ADM1 BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["5 0000000 Nenhuma das Alternativas", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["1 3457153 Minas Gerais ADM1 BR", "5"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["1 3457153 Minas Gerais ADM1 BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["5 0000000 Nenhuma das Alternativas", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["1 3457153 Minas Gerais ADM1 BR", "5"]]]]@'''
+
+
+
 
 
 
@@ -374,21 +378,15 @@ def createDataList(string):
 
 
 
-txt_l = '''[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["1 3457153 Minas Gerais ADM1 BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["5 0000000 Nenhuma das Alternativas", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["1 3457153 Minas Gerais ADM1 BR", "1"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["1 3457153 Minas Gerais ADM1 BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["5 0000000 Nenhuma das Alternativas", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["1 3457153 Minas Gerais ADM1 BR", "5"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["1 3457153 Minas Gerais ADM1 BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["5 0000000 Nenhuma das Alternativas", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["1 3457153 Minas Gerais ADM1 BR", "5"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["1 3457153 Minas Gerais ADM1 BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["5 0000000 Nenhuma das Alternativas", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["1 3457153 Minas Gerais ADM1 BR", "5"]]]]@[["https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml", [["1 3457153 Minas Gerais ADM1 BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["5 0000000 Nenhuma das Alternativas", "5"], ["0 3452525 Pouso Alegre PPL BR", "5"], ["1 3457153 Minas Gerais ADM1 BR", "5"]]]]@'''
-
-
-
 def groupData():
 	file_data_list = createDataList(txt_l)
 	number_of_tops = len(file_data_list[0][0][1])
-	print "NT : ",number_of_tops
 	nl = []
 	aux = []
 	count = 0
 
-	while count < 1:
+	while count < number_of_tops:
 		for i in file_data_list:
-			print i[0][1]
 			aux.append(i[0][1][count])
 
 		count = count + 1
@@ -396,9 +394,6 @@ def groupData():
 	nl = list(split(aux, number_of_tops))
 
 	return nl
-
-groupData()
-
 
 def mean(l):
 	return sum(l)/len(l)
