@@ -1,0 +1,78 @@
+{
+    "url": "https://g1.globo.com/sp/mogi-das-cruzes-suzano/noticia/2019/03/13/cena-mais-triste-que-assisti-em-toda-a-minha-vida-diz-doria-sobre-ataque-em-escola-em-suzano.ghtml", 
+    "toponyms": [
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Brasil", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Suzano", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "São Paulo", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Campos", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Brasil", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Brasil", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Suzano", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Brasil", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Suzano", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }, 
+        {
+            "std_deviation": 0.0, 
+            "toponym_geonamesId": "0000000", 
+            "top_find_on_new": "Suzano", 
+            "mean_confiability": 1.0, 
+            "top_selected_by_user": ""
+        }
+    ], 
+    "number_of_voters": 2, 
+    "cronbach": NaN, 
+    "title": "'Cena mais triste que assisti em toda a minha vida', diz Doria sobre ataque em escola em Suzano "
+}

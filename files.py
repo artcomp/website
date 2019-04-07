@@ -140,7 +140,6 @@ def groupData(title):
 def processData(title,url):
 	
 	minimum_value_to_accept_news = 2
-	number_of_decimal_cases_on_std_dev = 4
 	std_dev_to_accept = 3
 
 	nl = groupData(title)
@@ -185,7 +184,6 @@ def processData(title,url):
 			return False
 
 		mean_stddev.append((info_top_to_carry,mea,std_dev))
-
 
 	# print mean_stddev
  	return (calculateAlpha(title), mean_stddev)
