@@ -103,7 +103,7 @@ def insertDataIntoSelectTag(data):
 			string_option = string_option+'<option value="'+j+'">' + parseTopToUser(j) + '</option>'
 		
 		string_select = string_select + string_option+ option_none_of_alternatives_and_dont_know + '</select>'
-		data_list.append('''<div class="collapse" id="quest_''' + str(index_quest) + '''"> <div class="well"> <div class="row"> <div class="col-md-7">''' + "Topônimo : " + string_select +''' </div><div class="col-md-3">  Confiabilidade da Resposta : '''+ '''<select name="''' +option_select_in_text+str(index_quest)+ '''">'''+option_1_to_5 +''' </div> <div class="col-md-2"><button style="margin-right: 10px ;" class="btn btn-success" type="button" data-toggle="collapse" data-target="#quest_''' + str(index_quest) +''' " aria-expanded="false" aria-controls=quest_'''+ str(index_quest)+'''>Confirmar</button> ''' +  '''</div></div></div></div>''')
+		data_list.append('''<div class="collapse" id="quest_''' + str(index_quest) + '''"> <div class="well" style="background-color:rgb(255, 253, 214);"> <div class="row"> <div class="col-md-7">''' + "Topônimo : " + string_select +''' </div><div class="col-md-3">  Confiabilidade da Resposta : '''+ '''<select name="''' +option_select_in_text+str(index_quest)+ '''">'''+option_1_to_5 +''' </div> <div class="col-md-2"><button style="margin-right: 10px ;" class="btn btn-success" type="button" data-toggle="collapse" data-target="#quest_''' + str(index_quest) +''' " aria-expanded="false" aria-controls=quest_'''+ str(index_quest)+'''>Confirmar</button> ''' +  '''</div></div></div></div>''')
 		index_quest = index_quest + 1
 		
 		string_option = ""
