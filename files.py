@@ -123,12 +123,14 @@ def groupData(title):
 	txt_l =  readFile(title)
 	file_data_list = createDataList(txt_l)
 	number_of_tops = len(file_data_list[0][0][1])
+	# print "look size : ", file_data_list[0][0][1]
 	nl = []
 	aux = []
 	count = 0
 
 	while count < number_of_tops:
 		for i in file_data_list:
+			# print "Number TOPS : ", number_of_tops," Count : ", count, " datatoapp : ",i[0][1][count] 
 			aux.append(i[0][1][count])
 
 		count = count + 1
@@ -143,7 +145,7 @@ def processData(title,url):
 	minimum_value_to_accept_news = 2
 	number_of_decimal_cases_on_std_dev = 4
 	std_dev_to_accept = 3
-	valid_alpha_coeficient = 0.7
+	valid_alpha_coeficient = 0.0
 
 
 	nl = groupData(title)
