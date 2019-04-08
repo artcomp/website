@@ -36,14 +36,15 @@
   location.replace(url_for('validar	'))
 }
 
+
   function submitButtonStyle(_this) {
   _this.style.backgroundColor = "rgb(130, 134, 140)";
   _this.style.color = "white";
 }
 
 
-function validate(){
-  var x = document.getElementById("main_form");
+function valid(){
+  var x = document.getElementById("form");
   
   alert(x.elements.length)
   
@@ -100,7 +101,7 @@ function validate(){
 
                 <div class="row">
                     <div class="col-md-12 fade-up">
-                        <form action="{{url_for('avaliar')}}" name="main_form" method="POST" onsubmit="validate()">     
+                        <form action="{{url_for('avaliar')}}" name="form" onsubmit="valid()" method="POST" >     
                         {{ noticia|safe }}
                     </div>
 
@@ -114,7 +115,7 @@ function validate(){
 
                 <div class="row">
                     <div class="center-block text-center ">
-                        <button type="submit" class="btn btn-lg btn-outlined btn-primary animation bounce-in" style="font-size: 2em" name="submit_button" value="Do Something">Nova Notícia</button>
+                        <button type="submit" class="btn btn-lg btn-outlined btn-primary animation bounce-in" style="font-size: 2em" name="submit_button" value="Do Something" >Nova Notícia</button>
 
 
                         <button type="submit" class="btn btn-lg btn-outlined btn-primary animation bounce-in" style="font-size: 2em" name="submit_button" value="Do Something Else">Finalizar</button></form>

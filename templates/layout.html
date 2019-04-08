@@ -37,17 +37,26 @@
 		
 		.recuo { text-indent:2em }
 
-		select {
+		.style_select {
 		  border: 0px solid #ccc;
 		  border-radius: 5px;
 		  font-size: 1em;
 		  height: 35px;
-		  line-height: 12px;
+		  line-height: 10px;
 		  margin: 0;
-		  padding: 0px 5px;
+		  padding: 0px 0px 0px 0px;
 		  background: #383838 none no-repeat;
 		  cursor: pointer;
 		  color:#D9D9D9;
+		  text-align-last:center;
+		  text-align: center;
+   		  -ms-text-align-last: center;
+     	  -moz-text-align-last: center;
+		}
+
+		.well {
+			border-radius: 5px;
+			background-color:rgb(255, 253, 200);
 		}
 
 	/*	.style_toponym_in_text {
@@ -154,7 +163,7 @@
         </footer><!--/#footer-->
     </div>
 
-
+    
     <script src="{{ url_for( 'static', filename='js/plugins.js') }}"></script>
     <script src="{{ url_for( 'static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for( 'static', filename='js/jquery.prettyPhoto.js') }}"></script>   
