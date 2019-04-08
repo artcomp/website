@@ -44,16 +44,6 @@
 
 
 function valid(){
-  var x = document.getElementById("form");
-  
-  alert(x.elements.length)
-  
-  for (var i = 0; i < (x.elements.length-2); ++i){
-    if (x[i].value.includes("---")){
-      alert("Você não selecionou um campo. Por favor selecione uma opção")
-      return false;
-    }
-  }
   return true;
 }
 
@@ -101,7 +91,7 @@ function valid(){
 
                 <div class="row">
                     <div class="col-md-12 fade-up">
-                        <form action="{{url_for('avaliar')}}" name="form" onsubmit="valid()" method="POST" >     
+                        <form action="{{url_for('avaliar')}}" name="main_form" id="main_form" onsubmit="valid()" method="POST" >     
                         {{ noticia|safe }}
                     </div>
 

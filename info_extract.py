@@ -116,7 +116,7 @@ def create_text_button(data):
 	bt = []
 	
 	for i in data:# i remove aria-controls for test
-		bt.append('''<button onclick="submitButtonStyle(this)" style="font-size:1em;"class="btn style_toponym_in_text" type="button" data-toggle="collapse" aria-expanded="false" >''' + i + '''</button>''')
+		bt.append('''<button onclick="submitButtonStyle(this)" style="font-size:1em;"class="btn style_toponym_in_text main_form " type="button" data-toggle="collapse" aria-expanded="false" >''' + i + '''</button>''')
 
 	return bt
 
