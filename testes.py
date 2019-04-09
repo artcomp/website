@@ -258,27 +258,29 @@ def intercala_listas(a, b):
 
 
 urls = [
-	['https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2019/03/20/foragido-por-assassinato-de-jovem-de-guarulhos-e-preso-em-atibaia.ghtml',""],
-	['https://g1.globo.com/politica/noticia/2019/03/20/alexandre-de-moraes-indica-dois-delegados-para-atuar-no-inquerito-que-investiga-ofensas-ao-stf.ghtml',""],
-	['https://g1.globo.com/sp/sao-paulo/noticia/2019/03/19/chuva-forte-coloca-sao-paulo-em-estado-de-atencao-para-alagamentos-nesta-terca.ghtml',""],
-	['https://g1.globo.com/sp/sao-paulo/noticia/2019/03/20/verao-2019-foi-o-5o-mais-quente-da-historia-outono-tera-temperaturas-pouco-acima-da-media.ghtml',""],
-	['https://g1.globo.com/sp/sao-paulo/noticia/2019/03/19/pf-deflagra-operacao-para-prender-quadrilha-de-roubo-a-agencias-dos-correios.ghtml',""],
-	['https://g1.globo.com/sp/sao-paulo/noticia/2019/03/20/museu-da-lingua-portuguesa-abre-edital-para-programacao-cultural-do-dia-da-lingua-portuguesa.ghtml',""],
-	['https://g1.globo.com/rj/rio-de-janeiro/noticia/2019/03/20/prefeitura-do-rio-planeja-licitar-as-organizacoes-sociais-que-prestam-servico-a-saude.ghtml',""],
-	['https://g1.globo.com/rj/rio-de-janeiro/noticia/2019/03/20/igreja-que-ja-foi-a-catedral-do-rio-e-interditada-por-ma-conservacao.ghtml',""],
-	['https://g1.globo.com/sp/sao-paulo/noticia/2019/03/19/pf-deflagra-operacao-para-prender-quadrilha-de-roubo-a-agencias-dos-correios.ghtml',""],
-	['https://g1.globo.com/rj/rio-de-janeiro/noticia/2019/03/20/policia-investiga-morte-de-jovem-de-18-anos-com-oito-tiros-na-baixada-fluminense.ghtml',""],
 	['https://g1.globo.com/sp/mogi-das-cruzes-suzano/noticia/2019/03/13/cena-mais-triste-que-assisti-em-toda-a-minha-vida-diz-doria-sobre-ataque-em-escola-em-suzano.ghtml',""],
-	['https://g1.globo.com/mg/vales-mg/noticia/2019/03/20/oito-pessoas-sao-presas-em-operacao-de-combate-a-roubo-de-carga-em-minas-espirito-santo-e-rio-de-janeiro.ghtml',""],
-	['https://g1.globo.com/rj/rio-de-janeiro/noticia/2019/03/20/mp-rj-denuncia-sergio-cabral-e-outros-2-por-corrupcao-lavagem-de-dinheiro-e-organizacao-criminosa.ghtml',""],
+	['https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml',""],
+	['https://g1.globo.com/economia/noticia/2019/03/28/carrefour-cortara-mais-de-1-mil-empregos-na-franca-diz-sindicato.ghtml',""],
+	['https://g1.globo.com/mg/minas-gerais/noticia/2019/03/22/homem-e-suspeito-de-matar-mulher-em-belo-horizonte.ghtml',""],
+	['https://g1.globo.com/natureza/noticia/2019/03/28/como-a-alemanha-faz-para-evitar-que-animais-vivam-abandonados-nas-ruas.ghtml',""],
+	['https://g1.globo.com/sc/santa-catarina/noticia/2019/04/02/carga-de-cocaina-e-apreendida-no-porto-de-navegantes.ghtml',""],
+	['https://g1.globo.com/pe/pernambuco/noticia/2019/04/06/casal-e-agredido-com-facadas-durante-tentativa-de-assalto.ghtml',""],
+	['https://g1.globo.com/pe/pernambuco/noticia/2019/04/05/reducao-de-atendimento-no-expresso-cidadao-de-olinda-causa-transtornos-para-a-populacao.ghtml',""],
+	['https://g1.globo.com/go/goias/noticia/2019/04/07/alunos-de-goiania-desenvolvem-robo-para-torneio-internacional-nos-estados-unidos.ghtml',""],
+	['https://g1.globo.com/pr/norte-noroeste/noticia/2019/04/08/londrina-recebe-doses-da-vacina-contra-gripe-campanha-comeca-nesta-quarta-feira-10.ghtml',""],
+	['https://g1.globo.com/mundo/noticia/2018/10/21/principe-harry-vai-a-evento-sem-meghan-que-reduz-agenda-por-causa-da-gravidez.ghtml',""],
+	['https://g1.globo.com/sp/vale-do-paraiba-regiao/noticia/2019/04/05/ministro-diz-que-preservacao-ambiental-nao-pode-ser-uma-agenda-do-bom-mocismo.ghtml',""],
+	['https://g1.globo.com/sp/sao-paulo/noticia/2019/04/03/onu-lanca-em-sp-plataforma-online-que-auxilia-empresas-na-contratacao-de-refugiados-no-brasil.ghtml',""],
+	['https://g1.globo.com/sp/sao-paulo/noticia/2019/03/20/verao-2019-foi-o-5o-mais-quente-da-historia-outono-tera-temperaturas-pouco-acima-da-media.ghtml',""],
+	['https://g1.globo.com/rj/rio-de-janeiro/noticia/2019/03/20/policia-investiga-morte-de-jovem-de-18-anos-com-oito-tiros-na-baixada-fluminense.ghtml',""],
 	['https://g1.globo.com/mg/minas-gerais/noticia/2019/03/20/ipva-2019-em-mg-prazo-para-pagar-3a-parcela-termina-quarta.ghtml',""],
 	['https://g1.globo.com/mg/minas-gerais/noticia/2019/03/20/camara-de-bh-aprova-em-1o-turno-projeto-que-autoriza-botao-de-panico-em-escolas.ghtml',""],
-	['https://g1.globo.com/mg/minas-gerais/noticia/2019/03/20/justica-de-minas-bloqueia-r-7784-milhoes-do-filho-de-thor-batista.ghtml',""],
-	['https://g1.globo.com/rj/regiao-serrana/noticia/2019/03/22/petropolis-rj-tera-caminhada-pelo-dia-internacional-da-sindrome-de-down-neste-domingo.ghtml',""],
-	['https://g1.globo.com/mg/sul-de-minas/noticia/2019/03/20/funcionarios-sao-atropelados-por-ex-patrao-apos-audiencia-trabalhista-em-mg.ghtml',""],
-	['https://g1.globo.com/mg/minas-gerais/noticia/2019/03/20/nascido-e-formado-na-favela-artista-faz-uma-foto-por-dia-de-complexo-em-belo-horizonte.ghtml',""],
-	['https://g1.globo.com/mg/minas-gerais/noticia/2019/03/19/temporal-atinge-area-de-mineradora-e-enxurrada-provoca-incidentes-em-belo-vale-mg.ghtml',""]
-]
+	['https://g1.globo.com/df/distrito-federal/noticia/2019/04/05/operacao-investiga-grupo-que-desviou-mais-de-r-800-mil-de-clientes-do-bando-de-brasilia.ghtml',""],
+	['https://g1.globo.com/sp/sao-paulo/noticia/2019/04/08/doria-diz-que-nao-vai-cortar-servicos-nem-fechar-espacos-culturais-de-sp.ghtml',""],
+	['https://g1.globo.com/sp/sao-paulo/noticia/2019/04/08/mais-de-600-raios-atingem-a-grande-sp-durante-temporal-no-domingo.ghtml',""],
+	]
+
+
 
 
 def intercalateLists(l1, l2):
