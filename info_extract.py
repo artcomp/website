@@ -87,7 +87,7 @@ def parseTopToUser(strr):
 # nao pega os toponimos mas sim o resultado da consuta nos json
 def insertDataIntoSelectTag(data):
 	data_list = []
-	option_1_to_5 = '<option value="5">5</option> <option value="4">4</option> <option value="3">3</option> <option value="2">2</option> <option value="1" selected>1</option> </select>'
+	option_1_to_5 = '<option value="5">5</option> <option value="4">4</option> <option value="3">3</option> <option value="2">2</option> <option value="1">1</option><option value="0" selected>None</option>  </select>'
 	index_quest = 0
 	string_option = ""
 	string_select = ""
@@ -95,7 +95,7 @@ def insertDataIntoSelectTag(data):
 	option_select_in_text = "confi_data_"
 
 
-	option_none_of_alternatives_and_dont_know = '''<option value="5 0000000 Nenhuma das Alternativas">Nenhuma das Alternativas</option> <option value="6 0000000 Não é um lugar">Não é um lugar</option> <option value="7 0000000 Não Sei" selected>Não Sei</option>'''
+	option_none_of_alternatives_and_dont_know = '''<option value="5 0000000 Nenhuma das Alternativas">Nenhuma das Alternativas</option> <option value="6 0000000 Não é um lugar">Não é um lugar</option> <option value="7 0000000 Não Sei">Não Sei</option> <option value="8 0000000 -- None --" selected>-- None --</option>'''
 
 	for i in range(len(data)):
 		string_select = string_select + '<select class="form-control style_select" name="'+ name_select_in_text + str(i)+'">'
