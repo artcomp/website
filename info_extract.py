@@ -87,7 +87,7 @@ def parseTopToUser(strr):
 # nao pega os toponimos mas sim o resultado da consuta nos json
 def insertDataIntoSelectTag(data):
 	data_list = []
-	option_1_to_5 = '<option value="5">5</option> <option value="4">4</option> <option value="3">3</option> <option value="2">2</option> <option value="1">1</option><option value="0" selected>None</option>  </select>'
+	option_1_to_5 = '<option value="5">5</option> <option value="4">4</option> <option value="3">3</option> <option value="2">2</option> <option value="1">1</option><option value="None" selected>None</option>  </select>'
 	index_quest = 0
 	string_option = ""
 	string_select = ""
@@ -103,7 +103,7 @@ def insertDataIntoSelectTag(data):
 			string_option = string_option+'<option value="'+j+'">' + parseTopToUser(j) + '</option>'
 		
 		string_select = string_select + string_option+ option_none_of_alternatives_and_dont_know + '</select>'
-		data_list.append('''<div class="collapse" id="quest_''' + str(index_quest) + '''"> <div class="well"> <div class="row"> <div class="col-md-1">Topônimo:</div> <div class="col-md-6">''' + string_select +''' </div> <div class="col-md-2">  Certeza da Resposta :</div> <div class="col-md-1">'''+ '''<select class="form-control style_select" name="''' +option_select_in_text+str(index_quest)+ '''">'''+option_1_to_5 +''' </div> <div class="col-md-2" style="justify-items: center;"><button class="btn btn-success style="margin-right:5px;" type="button" data-toggle="collapse" data-target="#quest_''' + str(index_quest) +''' " aria-expanded="false" aria-controls=quest_'''+ str(index_quest)+'''>Confirmar</button> ''' +  '''</div></div></div></div>''')
+		data_list.append('''<div class="collapse" id="quest_''' + str(index_quest) + '''"> <div class="well"> <div class="row"> <div style="margin: 0 auto;" class="text-center"><div class="col-md-1">Topônimo:</div> <div class="col-md-6">''' + string_select +''' </div> <div class="col-md-2">  Certeza da Resposta :</div> <div class="col-md-1">'''+ '''<select class="form-control style_select" name="''' +option_select_in_text+str(index_quest)+ '''">'''+option_1_to_5 +''' </div> <div class="col-md-2" style="justify-items: center;"><button class="btn btn-success style="margin-right:5px;" type="button" data-toggle="collapse" data-target="#quest_''' + str(index_quest) +''' " aria-expanded="false" aria-controls=quest_'''+ str(index_quest)+'''>Confirmar</button> ''' +  '''</div></div></div></div></div>''')
 		index_quest = index_quest + 1
 		
 		string_option = ""

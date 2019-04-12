@@ -80,17 +80,13 @@
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1 fade-up">
 
-					<p class="text-justify recuo">Olá Tudo Bem, meu nome é Arthur, sou estudante do curso de Engenharia de Computação da Universidade Federal de Ouro Preto, no campos de João Monlevade, mais especificamente no Instituto de Ciencias Exatas e Aplicadas. Este projeto está sendo desenvolvido como Trabalho de Conclusão de Curso e tem como idéia central desenvolver um sistema que servirá de auxílio para a geração e validaçao de bases de dados geocodificadas. Apesar do nome ser um pouco extenso, a idéia é simples, mas primeiro vou explicar do que se trata o problema. </p>
+					<p class="text-justify recuo"> Olá, tudo bem!!! Meu nome é Arthur, sou estudante do curso de Engenharia de Computação na UFOP, e este é meu Trabalho de Conclusão de Curso. O objetivo do trabalho é construir bases de dados geocodificadas a partir da participação dos usuários. A ideia central do projeto é classificar as referências geográficas presentes em notícias e, em trabalhos futuros, utilizar estas bases para validar os algoritmos que detectam e classificam corretamente o local(informação geográfica) presente no texto. </p>
 
-					<p class="text-justify recuo">Hoje a quantidade de informação disponível na Internet vem crescendo de forma exponencial, ocasionado por diversos fatores como: aumento de redes sociais, blogs, sites de notícias, etc. Logo uma pergunta natural que se faz é a seguinte: O que fazer com esta quantidade de dados??? Bom, uma das diversas aplicações possíveis é a obtenção de informação geográfica, ou seja, saber a qual lugar geográfico determinada mídia(texto, áudio, vídeo) se refere. Com a obtenção desta informação é possível desenvolver soluções personalizadas para determinados grupo de pessoas baseados em sua locãlização. </p>
+					<p class="text-justify recuo">Para a construção destas bases de dados estão sendo utilizadas metérias de portais de notícias. Para cada notícia, há um cunjunto de topônimos (informação geográfica). O trabalho do usuário é selecionar, para cada topônimo, o local que julga ser o correto e o grau de certeza da sua resposta, baseado no contexto da notícia e os conhecimentos do usuário. O vídeo a seguir exemplifica a participação de um usuário, mostrando a classificação de uma notícia.</p>
 
-					<p class="text-justify recuo">Para a realização do trabalho é utilizado processamento de textos para a obtenção da referência geográfica. Neste processo, um algoritmo (ou um conjunto deles) é utilizado para tentar inferir tal informação, utilizando para isso um conjunto de parâmentros para a tomada de decisao. Entretando os algoritmos podem apresentar falhas, podendo estas falhas ser ocasionada por : falta de parâmetros, quantidade de parâmetros não são sufucientes para obter informações corretas, parâmetros utilizados podem ter pesos não ajustados entre si que refletem na decisão tomada.</p>
-
-					<p class="text-justify recuo">Agora que já se tem uma ideia do problema, qual a solução proposta por este trabalho??? Bom, alguns altores já proporam abordagens para solucionar o problema, entretanto estes utilizam bases de dados específicas para testar seus algoritmos. E qual o problema com isso? Bom se cada um utilizada dados específicos para sua solução, a comparação entre as diferentes soluções é inviabilizada, não permitindo assim saber os pontos fortes e fracos de cada solução.</p>
-
-					<p class="text-justify recuo">Assim, este projeto tem como objetivo construir bases de dados genéricas para que os desenvolvedores as utilizem para a construção de seus algoritmos, e permitindo no fururo a comparação entre os algoritmos desenvolvidos, já que serão construídos e validados a partir das base de dados construídas.</p>
-
-					<p class="text-justify recuo">E como voce participa neste processo??? Bom, a ideia é pegar uma notícia de um site de notícias, e permitir que o usuário, ou seja, você, classifique o local ao qual uma determinada palavra se refere. Como exemplo tome a Palavra "São Paulo", esta pode se referir a cidade, o estado, o time de futebol ou ainda o próprio santo. Assim você ajudará no processo classificando a qual contexto a palavra se refere, lembrando que neste trabalho o que nos enteressa é apenas a informação geográfica. Além de poder classificar é possível ainda indicar possíveis palavras que não estão rotuladas, e a cada classificação indicar o grau de confiança da sua resposta.</p>
+					<div class="embed-responsive embed-responsive-16by9">
+				    	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+				    </div>
 
 				</div>
 				<div class="col-md-4 fade-up">
@@ -98,15 +94,16 @@
 				</div>
 			</div>
 
+			<div class="gap"></div>  
+			
 			<div class="row">
 				<div class="center-block text-center ">
-					<a class="btn btn-lg btn-outlined btn-primary animation bounce-in" href="{{url_for('avaliar')}}" style="font-size: 2em">Avaliar</a>
+					<a class="btn btn-lg btn-outlined btn-primary animation bounce-in" href="{{url_for('avaliar')}}" style="font-size: 2em">Iniciar Avaliação</a>
 				</div>
 			</div> 
 
 
-			<div class="gap"></div>  
-			<div class="gap"></div>   
+			  
 		</div>      
 	</section>
 
