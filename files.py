@@ -14,9 +14,7 @@ def getNewsDataFromUrls():
 
 def dataFromUser(title, data):
 	path = title.replace(" ","-")
-	print "------------>>>>>>>>>>>>>>>>path",path
 	full_path = "bases/"+path
-	print "------------>>>>>>>>>>>>>>>>full_path",full_path
 	with open(full_path,"a+") as file:
 		json_str = json.dumps(data, ensure_ascii=False).encode('utf8')+"@"
 		file.write(json_str)
@@ -24,7 +22,9 @@ def dataFromUser(title, data):
 
 def readFile(title):
 	path = title.replace(" ","-")
-	with open("bases/"+path,"r") as file:
+	full_path = "bases/"+path
+
+	with open(full_path,"r") as file:
 		string = file.read();
 	return string
 
@@ -220,8 +220,9 @@ def generateNewsJsonFiles(processData, tops, url,title):
 	closed_news = json.dumps(json_news, sort_keys=False,indent=4, ensure_ascii=False).encode('utf8')
 
 
-	path=title.replace(" ", "-")
-	with open("closedBases/"+path,"w+") as file:
+	path = title.replace(" ","-")
+	full_path = "bases/"+path
+	with open(full_path,"w+") as file:
 		file.write(closed_news)
 
 def commentsFromUser(data):

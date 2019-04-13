@@ -103,7 +103,7 @@ def insertDataIntoSelectTag(data):
 			string_option = string_option+'<option value="'+j+'">' + parseTopToUser(j) + '</option>'
 		
 		string_select = string_select + string_option+ option_none_of_alternatives_and_dont_know + '</select>'
-		data_list.append('''<div class="collapse" id="quest_''' + str(index_quest) + '''"> <div class="well"> <div class="row"> <div style="margin: 0 auto;" class="text-center"><div class="col-md-1">Topônimo:</div> <div class="col-md-6">''' + string_select +''' </div> <div class="col-md-2">  Certeza da Resposta :</div> <div class="col-md-1">'''+ '''<select class="form-control style_select" name="''' +option_select_in_text+str(index_quest)+ '''">'''+option_1_to_5 +''' </div> <div class="col-md-2" style="justify-items: center;"><button class="btn btn-success style="margin-right:5px;" type="button" data-toggle="collapse" data-target="#quest_''' + str(index_quest) +''' " aria-expanded="false" aria-controls=quest_'''+ str(index_quest)+'''>Confirmar</button> ''' +  '''</div></div></div></div></div>''')
+		data_list.append('''<div class="collapse" id="quest_''' + str(index_quest) + '''"> <div class="well"> <div class="row"> <div style="margin: 0 auto;" class="text-center"><div class="col-md-1">Topônimo:</div> <div class="col-md-6">''' + string_select +''' </div> <div class="col-md-2">  Certeza da Resposta :</div> <div class="col-md-1">'''+ '''<select class="form-control style_select" name="''' +option_select_in_text+str(index_quest)+ '''">'''+option_1_to_5 +''' </div> <div class="col-md-2" style="justify-items: center;"><button class="btn btn-success style="margin-top:5px;" type="button" data-toggle="collapse" data-target="#quest_''' + str(index_quest) +''' " aria-expanded="false" aria-controls=quest_'''+ str(index_quest)+'''>Confirmar</button> ''' +  '''</div></div></div></div></div>''')
 		index_quest = index_quest + 1
 		
 		string_option = ""
@@ -245,7 +245,7 @@ def intercalateLists(l1, l2):
 
 def generateText(text, select_option):
 
-	qtd_of_blocks = len(select_option)/3
+	qtd_of_blocks = len(select_option)
 
 
 	index_of_paragraphs = [m.start() for m in re.finditer("</p><p>", text)]
