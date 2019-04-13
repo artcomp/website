@@ -11,11 +11,9 @@ def getNewsDataFromUrls():
         string = file.read();
 
     return json.loads(string)
-    #return string
 
 def dataFromUser(title, data):
 	path = title.replace(" ","-")
-	# print "Path to Store : >>>>", path
 	with open("bases/"+path,"a+") as file:
 		json_str = json.dumps(data, ensure_ascii=False).encode('utf8')+"@"
 		file.write(json_str)
@@ -32,7 +30,6 @@ def printDataFromUser(data):
 		for j in i[1]:
 			print j[0], j[1]
 
-
 def createDataList(string):
 	data = string.split('@')
 	del data[-1]
@@ -42,15 +39,12 @@ def createDataList(string):
 
 	return l
 
-
-
 def keyValue(item):
 	return item[1]
 
 def lprint(l):
 	for i in l:
 		print i
-
 
 # Create a function called "chunks" with two arguments, l and n:
 def chunks(l, n):
@@ -68,7 +62,6 @@ def CronbachAlpha(itemscores):
 
     return nitems / (nitems-1.) * (1 - itemvars.sum() / tscores.var(ddof=1))
 
-
 def calculateAlpha(title):
 	txt_l =  readFile(title)
 	file_data_list = createDataList(txt_l)
@@ -82,44 +75,30 @@ def calculateAlpha(title):
 		for j in i:
 			for k in j[1]:
 				aux_l.append(k[0])
-
 	
 	news = list(chunks(aux_l,number_of_tops))
 	for i in news:
 		hash_tops.append(list(map(lambda x: int(x.split()[0]), i)))
 
-
-	# print hash_tops	
-
 	return CronbachAlpha(hash_tops)
-
-
 
 def split(a, n):
     k, m = divmod(len(a), n)
     return (a[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in xrange(n))
-
 
 def createDataList(string):
 	data = string.split('@')
 	del data[-1]
 	l = []
 	for i in data:
-		
-
-
 		l.append(eval(i))
 
 	return l
-
-
-
 
 def countUsers(title):
 	read_f = readFile(title)
 	file_data_list = createDataList(read_f)
 	return len(file_data_list)
-
 
 def groupData(title):
 	txt_l =  readFile(title)
@@ -138,7 +117,6 @@ def groupData(title):
 	nl = list(split(aux, number_of_tops))
 
 	return nl
-
 
 def processData(title,url):
 	

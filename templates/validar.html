@@ -1,47 +1,53 @@
 {% extends "layout.html" %}
 
-
-
-
 {% block js_image_content %}
 
 {% endblock js_image_content %}
 
-
-
-
 {% block content %}
 
-    <section id="single-page-slider" class="no-margin">
-        <div class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="center gap fade-down section-heading">
-                                    <h2 class="main-title mt-0" style="color: gray;"> Obrigado pela Participação !!!   </h2>
+<div id="content-wrapper">
 
-                                </div>
-                                    <div id="content-wrapper">
-
-                                        <div class="row">
-                                                    <div class="center-block text-center ">
-                                                        <a class="btn btn-lg btn-outlined btn-primary animation bounce-in" href="{{url_for('index')}}" style="font-size: 2em">Finalizar</a>
-                                                    </div>
-                                               </div> 
-
-                                    </div>
-
-                            </div>   
-                        </div>
+    <section id="finalizar" class="white">
+        <div class="container">
+            <div class="gap"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center fade-down section-heading">
+                        <h2 class="main-title mt-0" style="color: gray;"> Obrigado pela Participação !!!   </h2>
+                    </div>   
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center fade-down section-heading">
+                        <div class="gap"></div>
+                        <h4 class="main-title mt-0" style="color: gray;">Alguma sugestão ou crítica ?</h4>             
+                        <h5 class="main-title mt-0" style="color: gray;"><!-- Deixe seu comentário --></h5>             
+                    </div>   
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="center-block text-center">
+                    <br>
+                    <div class="col-md-1" ></div>
+                    <div class="col-md-10" >
+                        <form method="post" action="sendemail.php" id="contactform">
+                            <textarea  name="comments" id="comments" type="text" placeholder="Comentários"></textarea>
+                            <div class="gap"></div>
+                                <button type="submit" class="btn btn-lg btn-outlined btn-primary animation bounce-in" style="font-size: 2em;text-indent:0em" name="submit_button" value="Do Something Else">Finalizar</button>
+                        </form>
                     </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-    </section><!--/#main-slider-->
+                    <div class="col-md-1" ></div>
+                </div>
+            </div>
+            <div class="row"></div>> 
+        </div>      
+    </section>
+
+</div>
 
 
-
-
-{% endblock content  %}
+    {% endblock content  %}

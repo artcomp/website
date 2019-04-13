@@ -59,18 +59,12 @@
 			background-color:rgb(255, 253, 200);
 		}
 
-	/*	.style_toponym_in_text {
-			border: 0px solid #ccc;
-		  border-radius: 5px;
-		  font-size: 1em;
-		  height: 25px;
-		  line-height: 12px;
-		  margin: 0;
-		  padding: 0px 5px;
-		  background: #383838 none no-repeat;
-		  cursor: pointer;
-		  color:#D9D9D9;
-		}*/
+		textarea[type="text"]::placeholder {  
+                  
+                /* Firefox, Chrome, Opera */ 
+                text-align: center; 
+                 vertical-align: middle;
+        } 
 		
 	</style>
 
@@ -102,47 +96,23 @@
 			</div>
 		</div>
 	</header><!--/header-->
-
-
-
-	<!--  Header UP , Footer DOWN   -->
-
-
 	{% block content %}
-
-
 	{% endblock content %}
-
-
 
 	<div id="footer-wrapper">
 		<section id="bottom" class="">
 			<div class="container">
 				<div class="row">
-
-
-
 					<div class="col-6 col-sm-6 center-block text-center">
 						<h3>Contato</h3>
 						<h4 > arthur.freitas@aluno.ufop.edu.br</h4>
 					</div><!--/.col-md-3-->
-
 
 					<div class="col-6 col-sm-6 center-block text-center">
 						<h3>Universidade Federal de Ouro Preto</h3>
 						<h4 >Instituto de Ciências Exatas e Aplicadas - João Monlevade - MG</h4>
 					</div><!--/.col-md-3-->
 
-                    <!-- 
-                    <div class="col-6 col-sm-6 center-block text-center">
-                        <h4>Come See Us</h4>
-                        <address class="text-justify">
-                            <strong>Ace Towers</strong><br>
-                            New York Ave,<br>
-                            New York, 215648<br>
-                            <abbr title="Phone"><i class="fa fa-phone"></i></abbr> 546 840654 05
-                        </address>
-                    </div>  -->
                 </div>
             </div>
         </section><!--/#bottom-->

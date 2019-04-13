@@ -24,7 +24,6 @@ def simple_get(url):
         log_error('Error during requests to {0} : {1}'.format(url, str(e)))
         return None
 
-
 def is_good_response(resp):
     """
     Returns True if the response seems to be HTML, False otherwise.
@@ -34,7 +33,6 @@ def is_good_response(resp):
             and content_type is not None 
             and content_type.find('html') > -1)
 
-
 def log_error(e):
     """
     It is always a good idea to log errors. 
@@ -42,7 +40,6 @@ def log_error(e):
     make it do anything.
     """
     print(e)
-
 
 def getNewsLinks(url):
     html_page = urllib2.urlopen(url)
@@ -52,10 +49,7 @@ def getNewsLinks(url):
     for link in soup.findAll('a', attrs={'href': re.compile("^http://")}):
         print link.get('href')
 
-    
-
 def getTitle(url):
-
 	raw_html = simple_get(url)
 	html_paragraph =  BeautifulSoup(raw_html, 'html.parser')
 
@@ -82,7 +76,6 @@ def getJsonReturnListOption(json):
     index_to_alpha = 0
     for each in data['geonames']:
         # print each['name'], each['fcode'], each['countryCode']
-
         try:
             list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'] + " " + each['countryCode'])
         except Exception as e:
@@ -117,13 +110,10 @@ def getToponymAndAttachJson(toponimos):
     
     for each in toponimos:
         topoynim_without_spaces = each.replace(' ','+').lower()
-
         # http://api.geonames.org/searchJSON?formatted=true&q=rio+de+janeiro&maxRows=3&lang=es&username=artdcomp&style=short
-
         url_search = 'http://api.geonames.org/searchJSON?formatted=true&q='+topoynim_without_spaces+'&maxRows='+quantity_results_wanted+'&lang=es&username=artdcomp&style=short'
         json_info = get(url_search).json()
        
-        # pi = getJsonReturnListOption(json_info)
         parse_info_to_be_shown = getJsonReturnListOption(json_info)
         list_data_to_be_shown.append(parse_info_to_be_shown)
 

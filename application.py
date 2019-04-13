@@ -57,19 +57,14 @@ def avaliar():
 		data_to_store.append((urls[random_news][0], user_data))
 		files.dataFromUser(title, data_to_store)
 		# data_to_create_json = files.processData(title, urls[random_news][0])
-		
-
 
 		# if news is closed then write into a file
 		# if data_to_create_json != False:
 		# 	files.generateNewsJsonFiles(data_to_create_json, toponyms, urls[random_news][0],title)
 
 		del data_to_store[:]
-
-
 		# limpa os dados, para nao acc 
 		del user_data[:]
-		
 
 		if request.form['submit_button'] == 'Do Something':
 			if len(random_news_sorted) == len(urls):
@@ -81,8 +76,6 @@ def avaliar():
 			random_news_sorted.append(random_news)
 
 			url = urls[random_news][0]
-			#print "The random news is : ", random_news
-
 			gen_data = urls[random_news][1]
 			noticia = gen_data[0]
 			toponyms = gen_data[1]
@@ -92,7 +85,6 @@ def avaliar():
 
 		elif request.form['submit_button'] == 'Do Something Else':
 			return render_template("validar.html")
-	            
 
 	if request.method == 'GET':
 		if len(random_news_sorted) == len(urls):
@@ -104,8 +96,6 @@ def avaliar():
 		random_news_sorted.append(random_news)
 
 		url = urls[random_news][0]
-		#print "The random news is : ", random_news
-
 		gen_data = urls[random_news][1]
 		noticia = gen_data[0]
 		toponyms = gen_data[1]
@@ -116,7 +106,6 @@ def avaliar():
 
 @app.route('/validar', methods=['post','get'])
 def validar():
-
 	return render_template("validar.html")
 	
 if __name__ == '__main__':

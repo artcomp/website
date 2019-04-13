@@ -120,27 +120,16 @@ def create_text_button(data):
 
 	return bt
 
-
-
-
 def replaceMultiple(mainString, toBeReplaces, newString):
-    # Iterate over the strings to be replaced
-    
+    # Iterate over the strings to be replaced    
     i = 0
-
     for elem in toBeReplaces :
         # Check if string is in the main string
-
         if elem in mainString :
             # Replace the string
-            
             mainString = mainString.replace(elem, newString[i])
-
             i = i + 1
-            
-    
     return  mainString
-
 
 def putButtonIndex(string):
 	split_string =  string.split()
@@ -204,18 +193,12 @@ def sortToponymOccurence(a,b):
 
 	return res
 
-
-
-
-
 # Create a function called "chunks" with two arguments, l and n:
 def chunks(l, n):
     # For item i in a range that is a length of l,
     for i in range(0, len(l), n):
         # Create an index range for l of n items:
         yield l[i:i+n]
-
-# print list(chunks([1,2,3,4,5,6,7,8], 3))
 
 def createSelectGroup(select_options, qtde_blocks):
 	lista = list(chunks(select_options, qtde_blocks))
@@ -293,17 +276,11 @@ def generateText(text, select_option):
 		j = j+1
 
 	select_block_size = int(len(select_option)/qtd_of_blocks)
-
 	new_select = createSelectGroup(select_option, select_block_size)
-
-
 	final_text = intercalateLists(new_select,listaa)
 	
-
-
 	string = ""
 	for i in final_text:
 		string = string + i
-
-
+		
 	return string
