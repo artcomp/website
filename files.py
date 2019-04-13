@@ -17,7 +17,8 @@ def dataFromUser(title, data):
 	with open("bases/"+path,"a+") as file:
 		json_str = json.dumps(data, ensure_ascii=False).encode('utf8')+"@"
 		file.write(json_str)
-	
+
+
 def readFile(title):
 	path = title.replace(" ","-")
 	with open("bases/"+path,"r") as file:
@@ -121,7 +122,7 @@ def groupData(title):
 def processData(title,url):
 	
 	minimum_value_to_accept_news = 2
-	std_dev_to_accept = 3
+	std_dev_to_accept = 10
 
 	nl = groupData(title)
 	l_aux = []
@@ -220,7 +221,13 @@ def generateNewsJsonFiles(processData, tops, url,title):
 	with open("closedBases/"+path,"w+") as file:
 		file.write(closed_news)
 
+def commentsFromUser(data):
+	_dict = dict()
+	_dict['user_comment'] = data
+	data_to_json = json.dumps(_dict, sort_keys=False,indent=4, ensure_ascii=False).encode('utf8')
 
+	with open("userComments/comments.txt","a+") as file:
+		file.write(data_to_json)
 
 
 

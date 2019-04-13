@@ -114,10 +114,10 @@ def insertDataIntoSelectTag(data):
 # 
 def create_text_button(data):
 	bt = []
-	
+	index = 0
 	for i in data:# i remove aria-controls for test
-		bt.append('''<button onclick="submitButtonStyle(this)" style="font-size:1em;"class="btn style_toponym_in_text main_form" type="button" data-toggle="collapse" aria-expanded="false" >''' + i + '''</button>''')
-
+		bt.append('''<button id="toponym_'''+str(index)+'''" onclick="submitButtonStyle(this)" style="font-size:1em;"class="btn style_toponym_in_text main_form" type="button" data-toggle="collapse" aria-expanded="false" >''' + i + '''</button>''')
+		index = index + 1
 	return bt
 
 def replaceMultiple(mainString, toBeReplaces, newString):

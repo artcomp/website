@@ -34,11 +34,20 @@
                     <br>
                     <div class="col-md-1" ></div>
                     <div class="col-md-10" >
-                        <form method="post" action="sendemail.php" id="contactform">
-                            <textarea  name="comments" id="comments" type="text" placeholder="Comentários"></textarea>
+
+                        <form action="{{url_for('validar')}}"  name="comment_form" method="POST">
+                            <textarea name="comments" id="comment_form" type="text" placeholder="Comentários"></textarea>
+                            
                             <div class="gap"></div>
-                                <button type="submit" class="btn btn-lg btn-outlined btn-primary animation bounce-in" style="font-size: 2em;text-indent:0em" name="submit_button" value="Do Something Else">Finalizar</button>
+                            
+                            <button type="submit" class="btn btn-lg btn-outlined btn-primary animation bounce-in" style="font-size: 2em;text-indent:0em" name="comment_button" value="comment_button">Finalizar</button>
                         </form>
+<!-- 
+                        <form action="{{url_for('validar')}}" method="POST">
+                            <textarea name="comments" id="comments" type="text" placeholder="Comentários"></textarea>
+                            <button type="submit">BTN</button>
+                        </form> -->
+
                     </div>
                     <div class="col-md-1" ></div>
                 </div>

@@ -6,7 +6,7 @@ import scrap
 import random
 import files
 
-from flask import request, Flask, render_template, url_for
+from flask import request, Flask, render_template, url_for, redirect
 
 app = Flask(__name__)
 
@@ -41,9 +41,7 @@ def avaliar():
 	if request.method == 'POST':
 		i=0
 		qt_of_tops = len(toponyms)
-		# del toponyms[:]
-
-			
+	
 		while qt_of_tops > 0:
 			top = request.form.get('top_data_'+str(i))
 			conf = request.form.get('confi_data_'+str(i))
@@ -53,14 +51,13 @@ def avaliar():
 				if conf is not None:
 					user_data.append((top,conf))
 
-
 		data_to_store.append((urls[random_news][0], user_data))
 		files.dataFromUser(title, data_to_store)
-		# data_to_create_json = files.processData(title, urls[random_news][0])
+		data_to_create_json = files.processData(title, urls[random_news][0])
 
-		# if news is closed then write into a file
-		# if data_to_create_json != False:
-		# 	files.generateNewsJsonFiles(data_to_create_json, toponyms, urls[random_news][0],title)
+		#if news is closed then write into a file
+		if data_to_create_json != False:
+			files.generateNewsJsonFiles(data_to_create_json, toponyms, urls[random_news][0],title)
 
 		del data_to_store[:]
 		# limpa os dados, para nao acc 
@@ -103,10 +100,16 @@ def avaliar():
 
 		return render_template("avaliar.html", title=title, noticia=noticia)
 
-
 @app.route('/validar', methods=['post','get'])
 def validar():
-	return render_template("validar.html")
-	
+
+	if request.method == "POST":
+		user_data = request.form.get('comments')
+		files.commentsFromUser(user_data)
+		return redirect(url_for('index'))
+
+	elif request.method == "GET":
+		return render_template("validar.html")
+
 if __name__ == '__main__':
 	app.run(debug=True)
