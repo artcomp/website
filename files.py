@@ -14,7 +14,10 @@ def getNewsDataFromUrls():
 
 def dataFromUser(title, data):
 	path = title.replace(" ","-")
-	with open("bases/"+path,"a+") as file:
+	print "------------>>>>>>>>>>>>>>>>path",path
+	full_path = "bases/"+path
+	print "------------>>>>>>>>>>>>>>>>full_path",full_path
+	with open(full_path,"a+") as file:
 		json_str = json.dumps(data, ensure_ascii=False).encode('utf8')+"@"
 		file.write(json_str)
 
