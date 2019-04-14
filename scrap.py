@@ -116,7 +116,7 @@ def getToponymAndAttachJson(toponimos):
     for each in toponimos:
         topoynim_without_spaces = each.replace(' ','+').lower()
         # http://api.geonames.org/searchJSON?formatted=true&q=rio+de+janeiro&maxRows=3&lang=es&username=artdcomp&style=short
-        url_search = 'http://api.geonames.org/searchJSON?formatted=true&q='+topoynim_without_spaces+'&maxRows='+quantity_results_wanted+'&lang=es&username=artdcomp&style=medium'
+        url_search = 'http://api.geonames.org/searchJSON?formatted=true&q='+topoynim_without_spaces+'&maxRows='+quantity_results_wanted+'&lang=pt&username=artdcomp&style=medium'
         json_info = get(url_search).json()
        
         parse_info_to_be_shown = getJsonReturnListOption(json_info)
