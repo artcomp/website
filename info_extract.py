@@ -251,7 +251,7 @@ def intercalateLists(l1, l2):
 
 def generateText(text, select_option):
 
-	qtd_of_blocks = len(select_option)/5
+	qtd_of_blocks = len(select_option)/3
 
 
 	index_of_paragraphs = [m.start() for m in re.finditer("</p><p>", text)]

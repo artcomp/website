@@ -54,10 +54,10 @@ def avaliar():
 		data_to_store.append((urls[random_news][0], user_data))
 		files.dataFromUser(title, data_to_store)
 		
-		data_to_create_json = files.processData(title, urls[random_news][0])
-		#if news is closed then write into a file
-		if data_to_create_json != False:
-			files.generateNewsJsonFiles(data_to_create_json, toponyms, urls[random_news][0],title)
+		# data_to_create_json = files.processData(title, urls[random_news][0])
+		# #if news is closed then write into a file
+		# if data_to_create_json != False:
+		# 	files.generateNewsJsonFiles(data_to_create_json, toponyms, urls[random_news][0],title)
 
 		del data_to_store[:]
 		# limpa os dados, para nao acc 
