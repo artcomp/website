@@ -234,8 +234,22 @@ def commentsFromUser(data):
 		file.write(data_to_json)
 
 
+def getTupleCountries():
+    tp = []
+    with open("paises-gentilicos-google-maps.json", "r") as f:
+        str = eval(f.read())
+    for i in str:
+        tp.append((i['sigla'],i['nome_pais']))
+    
+    return tp
 
-
+def parse_state():
+    tp = []
+    with open("estados-cidades.json", "r") as f:
+        str = json.loads(f.read())[0]
+    for i in str['estados']:
+        tp.append((i['sigla'],i['nome']))
+    print (tp)
 
 
 

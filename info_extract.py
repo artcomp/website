@@ -3,6 +3,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 import re
+import files
 
 from polyglot.text import Text, Word
 
@@ -59,29 +60,34 @@ def print_list(string_list):
 
 def parseTopToUser(strr):
 	codecs = [
-				('PCLI', '(País)'), 
-				('ADM1', '(Estado)'),
-				('ADM2', '(Distrito do Estado)'),
-				('PPLC', '(Capital do País)'),
-				('PPLA', '(Capital do Estado)'),
-				('AIRP', '(Aeroporto)'),
-				('PPL' , '(Cidade)'),
-				('RGN' , '(Região)'),
-				('CONT', '(Continente)')
+				('PCLI', '(País'), 
+				('ADM1', '(Estado'),
+				('ADM2', '(Distrito do Estado'),
+				('PPLC', '(Capital do País'),
+				('PPLA', '(Capital do Estado'),
+				('AIRP', '(Aeroporto'),
+				('PPL' , '(Cidade'),
+				('RGN' , '(Região'),
+				('CONT', '(Continente')
 				]
 
-
+	all_country = files.getTupleCountries()
+	
 	string = " ".join(strr.split()[2:])
 	b = string
+	c = string
 	for i in codecs:
 		if i[0] in string:
-			l =  len(string.split()[-1])
-			if l  == 2:
-				b = string.replace(string.split()[-2],i[1])
-			else:
-				b = string.replace(string.split()[-1],i[1])
+			b = string.replace(string.split()[-3],i[1])
 
-	return b
+	for i in all_country:
+		if i[0] == b.split()[-1]:
+			c = b.replace(b.split()[-1], '/ '+i[1])
+
+	d = c.replace('---',' ')
+	e = d.replace("$$$"," - ")
+	
+	return e+')'
 
 
 # nao pega os toponimos mas sim o resultado da consuta nos json
@@ -98,7 +104,7 @@ def insertDataIntoSelectTag(data):
 	option_none_of_alternatives_and_dont_know = '''<option value="5 0000000 Nenhuma das Alternativas">Nenhuma das Alternativas</option> <option value="6 0000000 Não é um lugar">Não é um lugar</option> <option value="7 0000000 Não Sei">Não Sei</option> <option value="8 0000000 -- None --" selected>-- None --</option>'''
 
 	for i in range(len(data)):
-		string_select = string_select + '<select class="form-control style_select" name="'+ name_select_in_text + str(i)+'">'
+		string_select = string_select + '<select class="form-control style_select" name="'+ name_select_in_text + str(i)+'" id="'+name_select_in_text + str(i)+'">'
 		for j in data[i]:
 			string_option = string_option+'<option value="'+j+'">' + parseTopToUser(j) + '</option>'
 		
@@ -245,7 +251,7 @@ def intercalateLists(l1, l2):
 
 def generateText(text, select_option):
 
-	qtd_of_blocks = len(select_option)
+	qtd_of_blocks = len(select_option)/5
 
 
 	index_of_paragraphs = [m.start() for m in re.finditer("</p><p>", text)]

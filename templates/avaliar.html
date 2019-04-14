@@ -54,14 +54,14 @@ function valid(){
     if (selects[i].value.includes("None")){
       if (i % 2 == 0){
         confirm("Você esqueceu de selecionar o "+(j+1) + "º topônimo")
-        var top_forg = "#toponym_"+(j).toString()
-        var elem = document.querySelector(top_forg);
+        // var top_forg = "#top_data+"+(j).toString()
+        // var elem = document.querySelector(top_forg);
         // elem.style.border= "3px solid #008CBA";
         // window.location.href = top_forg
         
       }else{
         confirm("Você esqueceu de selecionar a confiabilidade do "+(j+1) + "º topônimo") 
-        window.location.href = "#toponym_"+j.toString() 
+        // window.location.href = "#toponym_"+j.toString() 
       }      
       return false;
     }

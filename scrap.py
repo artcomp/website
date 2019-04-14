@@ -76,18 +76,23 @@ def getJsonReturnListOption(json):
     index_to_alpha = 0
     for each in data['geonames']:
         # print each['name'], each['fcode'], each['countryCode']
+        iso_state = "/$$$"
         try:
-            list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'] + " " + each['countryCode'])
+            iso_state = each['adminName1']
+            iso_state = '/'+iso_state
         except Exception as e:
-            list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'])
+            iso_state = "/$$$"
+        if len(iso_state) == 0:
+            iso_state = "/$$$"
+        iso_state = iso_state.replace(' ','---')
+
+        try:
+            list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'] + " " +iso_state+" "+ each['countryCode'])
+        except Exception as e:
+            list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'] + " " +iso_state+ " ###")
         
         index_to_alpha=index_to_alpha+1
-        # if each['fcode'] == "CONT" or each['fcode'] == "RGN":
-        #     list_d.append(each['name'] + " " + each['fcode'])
-        # if each['fcode'] != "CONT" and each['fcode'] != "RGN":
-        #     # print "=======",each['name'], "FCODE ",each['fcode'], each['countryCode']
-        #     list_d.append(each['name'] + " " + each['fcode'] + " " + each['countryCode'])
-    
+
     return list_d
 
 
@@ -111,7 +116,7 @@ def getToponymAndAttachJson(toponimos):
     for each in toponimos:
         topoynim_without_spaces = each.replace(' ','+').lower()
         # http://api.geonames.org/searchJSON?formatted=true&q=rio+de+janeiro&maxRows=3&lang=es&username=artdcomp&style=short
-        url_search = 'http://api.geonames.org/searchJSON?formatted=true&q='+topoynim_without_spaces+'&maxRows='+quantity_results_wanted+'&lang=es&username=artdcomp&style=short'
+        url_search = 'http://api.geonames.org/searchJSON?formatted=true&q='+topoynim_without_spaces+'&maxRows='+quantity_results_wanted+'&lang=es&username=artdcomp&style=medium'
         json_info = get(url_search).json()
        
         parse_info_to_be_shown = getJsonReturnListOption(json_info)
