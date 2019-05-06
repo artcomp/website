@@ -89,7 +89,7 @@ def getJsonReturnListOption(json):
         try:
             list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'] + " " +iso_state+" "+ each['countryCode'])
         except Exception as e:
-            list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'] + " " +iso_state+ " ###")
+            list_d.append(str(index_to_alpha) + " " + str(each['geonameId']) + " " + each['name'] + " " + each['fcode'] + " " +iso_state+ " .")
         
         index_to_alpha=index_to_alpha+1
 
